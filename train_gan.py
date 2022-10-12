@@ -76,8 +76,8 @@ for device_indx in args.gpu_ids:
 #transform to apply on dataset
 data_transform  = T.Compose([
                                T.Resize(image_size),
-                               T.CenterCrop(image_size),
-                               T.RandomHorizontalFlip(p=0.5),
+                               #T.CenterCrop(image_size),
+                               #T.RandomHorizontalFlip(p=0.5),
                                T.ToTensor(),
                                T.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))
 ])
