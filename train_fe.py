@@ -80,8 +80,8 @@ train_dataset  = MultiFolderLoader(args.data_dir, train_transforms, num_classes 
 update_dataset = MultiFolderLoader(args.data_dir, update_transforms, num_classes = args.num_classes, start_indx = 0, img_type = "."+args.im_ext, ret_class=True)
 
 #Data loaders to handle iterating over datasets
-train_loader  = DataLoader(train_dataset,  batch_size=args.batch_size, shuffle=True,  num_workers=3)
-update_loader = DataLoader(update_dataset, batch_size=args.batch_size, shuffle=False, num_workers=3)
+train_loader  = DataLoader(train_dataset,  batch_size=args.batch_size, shuffle=True,  num_workers=1)
+update_loader = DataLoader(update_dataset, batch_size=args.batch_size, shuffle=False, num_workers=1)
 
 
 """
