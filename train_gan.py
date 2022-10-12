@@ -87,8 +87,8 @@ trainset = MultiFolderLoader(root=args.data_dir, transform=data_transform, num_c
 novelset = MultiFolderLoader(root=args.data_dir, transform=data_transform, num_classes = args.val_classes, start_indx = args.num_classes, img_type = "."+args.im_ext, ret_class=False)
 
 #Load datasets into dataloaders
-trainloader = DataLoader(trainset, batch_size=args.batch_size, shuffle=True, num_workers=4, pin_memory = True)
-novelloader = DataLoader(novelset, batch_size=args.batch_size, shuffle=True, num_workers=1, pin_memory = True)
+trainloader = DataLoader(trainset, batch_size=args.batch_size, shuffle=True, num_workers=1, pin_memory = False)
+novelloader = DataLoader(novelset, batch_size=args.batch_size, shuffle=True, num_workers=1, pin_memory = False)
 
 #Calculate rough number of epochs needed to complete training itterations
 nepoch = (args.num_of_iters)//len(trainloader)
