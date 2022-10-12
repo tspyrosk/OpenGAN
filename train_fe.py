@@ -64,14 +64,14 @@ Set up DataLoaders
 #Transformations/pre-processing operations
 train_transforms = transforms.Compose([
         transforms.Resize(input_size),
-        transforms.RandomCrop(input_size),
-        transforms.RandomHorizontalFlip(),
+        #transforms.RandomCrop(input_size),
+        #transforms.RandomHorizontalFlip(),
         transforms.ToTensor(),
         transforms.Normalize(mean, std)])
 
 update_transforms = transforms.Compose([
         transforms.Resize(input_size),
-        transforms.CenterCrop(input_size),
+        #transforms.CenterCrop(input_size),
         transforms.ToTensor(),
         transforms.Normalize(mean, std)])
 
